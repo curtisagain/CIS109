@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*Curtis Aloia
+ * Reno Technology Academmy
+ * Udemy: 17 Beginner C# Walkthrough Projects Step By Step
+ * Project 1 : Create a Matching Pairs Icon Image Game
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +17,12 @@ namespace MarchingPairsGame
 {
 	public partial class FormMatchingPairsGame : Form
 	{
+		Random random = new Random();
+		List<string> icons = new List<string>()
+		{
+			"C", "C", "zoop", "zoop", "waffle", "waffle", "Curtis", "Curtis",
+			"plate", "plate", "cutlery", "cutlery", "q", "q", "krab", "krab",
+		};
 		public FormMatchingPairsGame()
 		{
 			InitializeComponent();
