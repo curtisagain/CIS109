@@ -1,5 +1,6 @@
 ﻿/*Curtis Aloia
  * Reno Technology Academmy
+ * CIS109: Coding in C# for Imbedded Systems
  * Udemy: 17 Beginner C# Walkthrough Projects Step By Step
  * Project 1 : Create a Matching Pairs Icon Image Game
 */
@@ -20,14 +21,30 @@ namespace MarchingPairsGame
 		Random random = new Random();
 		List<string> icons = new List<string>()
 		{
-			"C", "C", "zoop", "zoop", "waffle", "waffle", "Curtis", "Curtis",
+			"w", "w", "zoop", "zoop", "affle", "affle", "Curtis", "Curtis",
 			"plate", "plate", "cutlery", "cutlery", "q", "q", "krab", "krab",
 		};
 		public FormMatchingPairsGame()
 		{
 			InitializeComponent();
+			AssignIconsToSquares();
 		}
+		private void AssignIconsToSquares()
+		{
 
+			foreach (Control control in TableLayoutPanel.Controls)
+			{ 
+				Label iconLabel = control as Label;
+
+				if (iconLabel != null)
+				{
+					int randomNumber = random.Next(icons.Count);
+					iconLabel.Text = icons[randomNumber];
+
+					icons.RemoveAt(randomNumber);
+				}
+			}
+		}
 		private void Form1_Load(object sender, EventArgs e)
 		{
 
