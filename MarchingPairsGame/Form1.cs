@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MarchingPairsGame
 {
 	public partial class FormMatchingPairsGame : Form
@@ -21,33 +22,101 @@ namespace MarchingPairsGame
 		Random random = new Random();
 		List<string> icons = new List<string>()
 		{
-			"w", "w", "zoop", "zoop", "affle", "affle", "Curtis", "Curtis",
+			"w", "w", "o", "o", "affle", "affle", "Curtis", "Curtis",
 			"plate", "plate", "cutlery", "cutlery", "q", "q", "krab", "krab",
 		};
+		Label firstClicked, secondClicked;
 		public FormMatchingPairsGame()
 		{
 			InitializeComponent();
 			AssignIconsToSquares();
 		}
+		private void label_Click(object sender, EventArgs e)
+		{
+			if (firstClicked != null && secondClicked != null)
+				return;
+
+			Label clickedLabel = sender as Label;
+
+			if (clickedLabel == null)
+				return;
+			if (clickedLabel.ForeColor == Color.Black)
+				return;
+
+			if (firstClicked == null)
+			{
+				firstClicked = clickedLabel;
+				firstClicked.ForeColor = Color.Black;
+				return;
+			}
+
+			secondClicked = clickedLabel;
+			secondClicked.ForeColor = Color.Black;
+			CheckForWinner();
+
+			if (firstClicked.Text == secondClicked.Text)
+			{
+				firstClicked = null;
+				secondClicked = null;
+			}
+			else
+				timer1.Start();
+		}
+
+		private void CheckForWinner()
+		{
+			Label label;
+			for (int i = 0; i < TableLayoutPanel.Controls.Count; i++)
+			{
+				label = TableLayoutPanel.Controls[i] as Label;
+
+				if (label != null && label.ForeColor == label.BackColor)
+					return;
+			}
+
+			MessageBox.Show("You beat my matching puzzle!");
+			Close();
+		}
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			timer1.Stop();
+
+			firstClicked.ForeColor = firstClicked.BackColor;
+			secondClicked.ForeColor = secondClicked.BackColor;
+
+			firstClicked = null;
+			secondClicked = null;
+
+		}
+
+		
+
 		private void AssignIconsToSquares()
 		{
 
-			foreach (Control control in TableLayoutPanel.Controls)
-			{ 
-				Label iconLabel = control as Label;
+	
+			Label iconLabel;
+			int randomNumber;
 
-				if (iconLabel != null)
+			for (int i = 0; i < TableLayoutPanel.Controls.Count; i++)
 				{
-					int randomNumber = random.Next(icons.Count);
-					iconLabel.Text = icons[randomNumber];
-					iconLabel.ForeColor = iconLabel.BackColor;
-					icons.RemoveAt(randomNumber);
-				}
-			}
-		}
-		private void Form1_Load(object sender, EventArgs e)
-		{
+				if (TableLayoutPanel.Controls[i] is Label)
+					iconLabel = (Label)TableLayoutPanel.Controls[i];
+				else
+					continue;
 
+
+				randomNumber = random.Next(0, icons.Count);
+				iconLabel.Text = icons[randomNumber];
+				icons.RemoveAt(randomNumber);
+
+			}
+				
+				
+					
+				
+			
 		}
+	
 	}
 }
