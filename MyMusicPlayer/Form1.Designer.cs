@@ -31,11 +31,11 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyMusicPlayer));
 			this.Player = new AxWMPLib.AxWindowsMediaPlayer();
 			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.Browse = new System.Windows.Forms.Button();
-			this.Play = new System.Windows.Forms.Button();
-			this.Pause = new System.Windows.Forms.Button();
-			this.Stop = new System.Windows.Forms.Button();
-			this.Exit = new System.Windows.Forms.Button();
+			this.buttonBrowse = new System.Windows.Forms.Button();
+			this.buttonPlay = new System.Windows.Forms.Button();
+			this.buttonPause = new System.Windows.Forms.Button();
+			this.buttonStop = new System.Windows.Forms.Button();
+			this.buttonExit = new System.Windows.Forms.Button();
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
 			this.SuspendLayout();
@@ -51,77 +51,81 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(0, 264);
+			this.textBox1.Location = new System.Drawing.Point(0, 330);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(109, 32);
 			this.textBox1.TabIndex = 1;
 			// 
-			// Browse
+			// buttonBrowse
 			// 
-			this.Browse.BackColor = System.Drawing.Color.Coral;
-			this.Browse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.Browse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.Browse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.Browse.Location = new System.Drawing.Point(57, 315);
-			this.Browse.Name = "Browse";
-			this.Browse.Size = new System.Drawing.Size(157, 46);
-			this.Browse.TabIndex = 2;
-			this.Browse.Text = "Browse";
-			this.Browse.UseVisualStyleBackColor = false;
+			this.buttonBrowse.BackColor = System.Drawing.Color.Coral;
+			this.buttonBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			this.buttonBrowse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonBrowse.Location = new System.Drawing.Point(70, 435);
+			this.buttonBrowse.Name = "buttonBrowse";
+			this.buttonBrowse.Size = new System.Drawing.Size(157, 46);
+			this.buttonBrowse.TabIndex = 2;
+			this.buttonBrowse.Text = "Browse";
+			this.buttonBrowse.UseVisualStyleBackColor = false;
+			this.buttonBrowse.Click += new System.EventHandler(this.ButtonBrowse_Click);
 			// 
-			// Play
+			// buttonPlay
 			// 
-			this.Play.BackColor = System.Drawing.Color.Green;
-			this.Play.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.Play.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.Play.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.Play.Location = new System.Drawing.Point(252, 315);
-			this.Play.Name = "Play";
-			this.Play.Size = new System.Drawing.Size(157, 46);
-			this.Play.TabIndex = 3;
-			this.Play.Text = "Play";
-			this.Play.UseVisualStyleBackColor = false;
+			this.buttonPlay.BackColor = System.Drawing.Color.Green;
+			this.buttonPlay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			this.buttonPlay.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonPlay.Location = new System.Drawing.Point(251, 435);
+			this.buttonPlay.Name = "buttonPlay";
+			this.buttonPlay.Size = new System.Drawing.Size(157, 46);
+			this.buttonPlay.TabIndex = 3;
+			this.buttonPlay.Text = "Play";
+			this.buttonPlay.UseVisualStyleBackColor = false;
+			this.buttonPlay.Click += new System.EventHandler(this.ButtonPlay_Click);
 			// 
-			// Pause
+			// buttonPause
 			// 
-			this.Pause.BackColor = System.Drawing.Color.DeepSkyBlue;
-			this.Pause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.Pause.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.Pause.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.Pause.Location = new System.Drawing.Point(442, 315);
-			this.Pause.Name = "Pause";
-			this.Pause.Size = new System.Drawing.Size(157, 46);
-			this.Pause.TabIndex = 4;
-			this.Pause.Text = "Pause";
-			this.Pause.UseVisualStyleBackColor = false;
+			this.buttonPause.BackColor = System.Drawing.Color.DeepSkyBlue;
+			this.buttonPause.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			this.buttonPause.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonPause.Location = new System.Drawing.Point(436, 435);
+			this.buttonPause.Name = "buttonPause";
+			this.buttonPause.Size = new System.Drawing.Size(157, 46);
+			this.buttonPause.TabIndex = 4;
+			this.buttonPause.Text = "Pause";
+			this.buttonPause.UseVisualStyleBackColor = false;
+			this.buttonPause.Click += new System.EventHandler(this.ButtonPause_Click);
 			// 
-			// Stop
+			// buttonStop
 			// 
-			this.Stop.BackColor = System.Drawing.Color.Red;
-			this.Stop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.Stop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.Stop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.Stop.Location = new System.Drawing.Point(628, 315);
-			this.Stop.Name = "Stop";
-			this.Stop.Size = new System.Drawing.Size(157, 46);
-			this.Stop.TabIndex = 5;
-			this.Stop.Text = "Stop";
-			this.Stop.UseVisualStyleBackColor = false;
-			this.Stop.Click += new System.EventHandler(this.Button3_Click);
+			this.buttonStop.BackColor = System.Drawing.Color.Red;
+			this.buttonStop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonStop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			this.buttonStop.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonStop.Location = new System.Drawing.Point(617, 435);
+			this.buttonStop.Name = "buttonStop";
+			this.buttonStop.Size = new System.Drawing.Size(157, 46);
+			this.buttonStop.TabIndex = 5;
+			this.buttonStop.Text = "Stop";
+			this.buttonStop.UseVisualStyleBackColor = false;
+			this.buttonStop.Click += new System.EventHandler(this.ButtonStop_Click);
 			// 
-			// Exit
+			// buttonExit
 			// 
-			this.Exit.BackColor = System.Drawing.Color.DimGray;
-			this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-			this.Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-			this.Exit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.Exit.Location = new System.Drawing.Point(824, 315);
-			this.Exit.Name = "Exit";
-			this.Exit.Size = new System.Drawing.Size(157, 46);
-			this.Exit.TabIndex = 6;
-			this.Exit.Text = "Exit";
-			this.Exit.UseVisualStyleBackColor = false;
+			this.buttonExit.BackColor = System.Drawing.Color.DimGray;
+			this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+			this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+			this.buttonExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.buttonExit.Location = new System.Drawing.Point(802, 435);
+			this.buttonExit.Name = "buttonExit";
+			this.buttonExit.Size = new System.Drawing.Size(157, 46);
+			this.buttonExit.TabIndex = 6;
+			this.buttonExit.Text = "Exit";
+			this.buttonExit.UseVisualStyleBackColor = false;
+			this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
 			// 
 			// openFileDialog1
 			// 
@@ -132,12 +136,12 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Teal;
-			this.ClientSize = new System.Drawing.Size(1062, 373);
-			this.Controls.Add(this.Exit);
-			this.Controls.Add(this.Stop);
-			this.Controls.Add(this.Pause);
-			this.Controls.Add(this.Play);
-			this.Controls.Add(this.Browse);
+			this.ClientSize = new System.Drawing.Size(1062, 524);
+			this.Controls.Add(this.buttonExit);
+			this.Controls.Add(this.buttonStop);
+			this.Controls.Add(this.buttonPause);
+			this.Controls.Add(this.buttonPlay);
+			this.Controls.Add(this.buttonBrowse);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.Player);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -155,11 +159,11 @@
 
 		private AxWMPLib.AxWindowsMediaPlayer Player;
 		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.Button Browse;
-		private System.Windows.Forms.Button Play;
-		private System.Windows.Forms.Button Pause;
-		private System.Windows.Forms.Button Stop;
-		private System.Windows.Forms.Button Exit;
+		private System.Windows.Forms.Button buttonBrowse;
+		private System.Windows.Forms.Button buttonPlay;
+		private System.Windows.Forms.Button buttonPause;
+		private System.Windows.Forms.Button buttonStop;
+		private System.Windows.Forms.Button buttonExit;
 		private System.Windows.Forms.OpenFileDialog openFileDialog1;
 	}
 }
