@@ -51,10 +51,10 @@
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(0, 330);
+			this.textBox1.Location = new System.Drawing.Point(0, 327);
 			this.textBox1.Multiline = true;
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(109, 32);
+			this.textBox1.Size = new System.Drawing.Size(143, 35);
 			this.textBox1.TabIndex = 1;
 			// 
 			// buttonBrowse
@@ -130,6 +130,7 @@
 			// openFileDialog1
 			// 
 			this.openFileDialog1.FileName = "openFileDialog1";
+			this.openFileDialog1.Multiselect = true;
 			// 
 			// MyMusicPlayer
 			// 
