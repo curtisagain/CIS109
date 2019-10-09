@@ -49,10 +49,27 @@ namespace ScreenSaver
 				mp.Picnum = i % BGImages.Count;
 				mp.X = rand.Next(0, Width);
 				mp.X = rand.Next(0, Height);
-
 				BritPics.Add(mp);
 			}
 		}
 
+		private void ScreenSaverTimer_Tick(object sender, EventArgs e)
+		{
+			Refresh();
+		}
+
+		private void FormScreenSaver_Paint(object sender, PaintEventArgs e)
+		{
+			foreach (BritPic bp in BritPics)
+			{
+				e.Graphics.DrawImage(BGImages[bp.Picnum], bp.X, bp.Y);
+				bp.X -= 2;
+
+				if (bp.X < -250)
+				{
+					bp.X = Width + rand.Next(20, 100);
+				}
+			}
+		}
 	}
 }

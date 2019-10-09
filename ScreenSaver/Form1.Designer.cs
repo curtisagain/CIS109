@@ -29,8 +29,14 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.ScreenSaverTimer = new System.Windows.Forms.Timer(this.components);
 			this.SuspendLayout();
+			// 
+			// ScreenSaverTimer
+			// 
+			this.ScreenSaverTimer.Enabled = true;
+			this.ScreenSaverTimer.Interval = 60;
+			this.ScreenSaverTimer.Tick += new System.EventHandler(this.ScreenSaverTimer_Tick);
 			// 
 			// FormScreenSaver
 			// 
@@ -45,6 +51,7 @@
 			this.TopMost = true;
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
 			this.Load += new System.EventHandler(this.FormScreenSaver_Load);
+			this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormScreenSaver_Paint);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormScreenSaver_KeyDown);
 			this.ResumeLayout(false);
 
@@ -52,7 +59,7 @@
 
 		#endregion
 
-		private System.Windows.Forms.Timer timer1;
+		private System.Windows.Forms.Timer ScreenSaverTimer;
 	}
 }
 
