@@ -43,7 +43,7 @@ namespace ScreenSaver
 				BGImages.Add(new Bitmap(image));
 			}
 
-			for (int i = 0; i < 50; ++i)
+			for (int i = 0; i < 3; ++i)
 			{
 				BritPic mp = new BritPic();
 				mp.Picnum = i % BGImages.Count;

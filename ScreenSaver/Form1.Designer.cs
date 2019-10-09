@@ -35,7 +35,7 @@
 			// ScreenSaverTimer
 			// 
 			this.ScreenSaverTimer.Enabled = true;
-			this.ScreenSaverTimer.Interval = 60;
+			this.ScreenSaverTimer.Interval = 12000;
 			this.ScreenSaverTimer.Tick += new System.EventHandler(this.ScreenSaverTimer_Tick);
 			// 
 			// FormScreenSaver
