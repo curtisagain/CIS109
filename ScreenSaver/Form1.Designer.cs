@@ -1,6 +1,6 @@
 ﻿namespace ScreenSaver
 {
-	partial class Form1
+	partial class FormScreenSaver
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,12 +29,29 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.SuspendLayout();
+			// 
+			// FormScreenSaver
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Black;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Text = "Form1";
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Name = "FormScreenSaver";
+			this.ShowInTaskbar = false;
+			this.Text = "My Screen";
+			this.TopMost = true;
+			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormScreenSaver_KeyDown);
+			this.ResumeLayout(false);
+
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Timer timer1;
 	}
 }
 

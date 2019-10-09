@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ScreenSaver
 {
-	public partial class Form1 : Form
+	public partial class FormScreenSaver : Form
 	{
-		public Form1()
+		public FormScreenSaver()
 		{
 			InitializeComponent();
+		}
+
+		private void FormScreenSaver_KeyDown(object sender, KeyEventArgs e)
+		{
+			Close();
 		}
 	}
 }
