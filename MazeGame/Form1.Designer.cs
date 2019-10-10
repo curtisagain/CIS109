@@ -251,6 +251,7 @@
 			this.FinishLabel.Size = new System.Drawing.Size(36, 23);
 			this.FinishLabel.TabIndex = 17;
 			this.FinishLabel.Text = "Finish";
+			this.FinishLabel.MouseEnter += new System.EventHandler(this.FinishLabel_MouseEnter);
 			// 
 			// label19
 			// 
