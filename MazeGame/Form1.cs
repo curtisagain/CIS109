@@ -30,5 +30,10 @@ namespace MazeGame
 			startingPoint.Offset(10, 10);
 			Cursor.Position = PointToScreen(startingPoint);
 		}
+
+		private void wall_Mouse(object sender, EventArgs e)
+		{
+			MoveToStart();
+		}
 	}
 }

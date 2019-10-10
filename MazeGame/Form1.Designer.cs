@@ -89,6 +89,7 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(550, 517);
 			this.panel1.TabIndex = 0;
+			this.panel1.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label1
 			// 
@@ -98,6 +99,7 @@
 			this.label1.Size = new System.Drawing.Size(440, 36);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "\r\n";
+			this.label1.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label2
 			// 
@@ -107,6 +109,7 @@
 			this.label2.Size = new System.Drawing.Size(36, 92);
 			this.label2.TabIndex = 1;
 			this.label2.Text = "\r\n";
+			this.label2.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label3
 			// 
@@ -116,6 +119,7 @@
 			this.label3.Size = new System.Drawing.Size(157, 31);
 			this.label3.TabIndex = 2;
 			this.label3.Text = "\r\n";
+			this.label3.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label4
 			// 
@@ -125,6 +129,7 @@
 			this.label4.Size = new System.Drawing.Size(200, 29);
 			this.label4.TabIndex = 3;
 			this.label4.Text = "\r\n";
+			this.label4.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label5
 			// 
@@ -134,6 +139,7 @@
 			this.label5.Size = new System.Drawing.Size(100, 23);
 			this.label5.TabIndex = 4;
 			this.label5.Text = "\r\n";
+			this.label5.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label6
 			// 
@@ -143,6 +149,7 @@
 			this.label6.Size = new System.Drawing.Size(100, 23);
 			this.label6.TabIndex = 5;
 			this.label6.Text = "\r\n";
+			this.label6.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label7
 			// 
@@ -152,6 +159,7 @@
 			this.label7.Size = new System.Drawing.Size(36, 92);
 			this.label7.TabIndex = 6;
 			this.label7.Text = "\r\n";
+			this.label7.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label8
 			// 
@@ -161,6 +169,7 @@
 			this.label8.Size = new System.Drawing.Size(36, 92);
 			this.label8.TabIndex = 7;
 			this.label8.Text = "\r\n";
+			this.label8.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label9
 			// 
@@ -170,6 +179,7 @@
 			this.label9.Size = new System.Drawing.Size(36, 406);
 			this.label9.TabIndex = 8;
 			this.label9.Text = "\r\n";
+			this.label9.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label10
 			// 
@@ -179,6 +189,7 @@
 			this.label10.Size = new System.Drawing.Size(36, 92);
 			this.label10.TabIndex = 9;
 			this.label10.Text = "\r\n";
+			this.label10.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label11
 			// 
@@ -188,6 +199,7 @@
 			this.label11.Size = new System.Drawing.Size(42, 92);
 			this.label11.TabIndex = 10;
 			this.label11.Text = "\r\n";
+			this.label11.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label12
 			// 
@@ -197,6 +209,7 @@
 			this.label12.Size = new System.Drawing.Size(36, 92);
 			this.label12.TabIndex = 11;
 			this.label12.Text = "\r\n";
+			this.label12.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label13
 			// 
@@ -206,6 +219,7 @@
 			this.label13.Size = new System.Drawing.Size(100, 23);
 			this.label13.TabIndex = 12;
 			this.label13.Text = "\r\n";
+			this.label13.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label14
 			// 
@@ -215,6 +229,7 @@
 			this.label14.Size = new System.Drawing.Size(165, 23);
 			this.label14.TabIndex = 13;
 			this.label14.Text = "\r\n";
+			this.label14.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label15
 			// 
@@ -224,6 +239,7 @@
 			this.label15.Size = new System.Drawing.Size(100, 23);
 			this.label15.TabIndex = 14;
 			this.label15.Text = "\r\n";
+			this.label15.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label16
 			// 
@@ -233,6 +249,7 @@
 			this.label16.Size = new System.Drawing.Size(100, 23);
 			this.label16.TabIndex = 15;
 			this.label16.Text = "\r\n";
+			this.label16.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label17
 			// 
@@ -242,6 +259,7 @@
 			this.label17.Size = new System.Drawing.Size(100, 23);
 			this.label17.TabIndex = 16;
 			this.label17.Text = "\r\n";
+			this.label17.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// FinishLabel
 			// 
@@ -261,6 +279,7 @@
 			this.label19.Size = new System.Drawing.Size(100, 23);
 			this.label19.TabIndex = 18;
 			this.label19.Text = "\r\n";
+			this.label19.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label20
 			// 
@@ -270,6 +289,7 @@
 			this.label20.Size = new System.Drawing.Size(100, 23);
 			this.label20.TabIndex = 19;
 			this.label20.Text = "\r\n";
+			this.label20.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label21
 			// 
@@ -279,6 +299,7 @@
 			this.label21.Size = new System.Drawing.Size(36, 92);
 			this.label21.TabIndex = 20;
 			this.label21.Text = "\r\n";
+			this.label21.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label22
 			// 
@@ -288,6 +309,7 @@
 			this.label22.Size = new System.Drawing.Size(36, 92);
 			this.label22.TabIndex = 21;
 			this.label22.Text = "\r\n";
+			this.label22.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label23
 			// 
@@ -297,6 +319,7 @@
 			this.label23.Size = new System.Drawing.Size(36, 162);
 			this.label23.TabIndex = 22;
 			this.label23.Text = "\r\n";
+			this.label23.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label24
 			// 
@@ -306,6 +329,7 @@
 			this.label24.Size = new System.Drawing.Size(36, 329);
 			this.label24.TabIndex = 23;
 			this.label24.Text = "\r\n";
+			this.label24.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// label25
 			// 
@@ -315,6 +339,7 @@
 			this.label25.Size = new System.Drawing.Size(100, 23);
 			this.label25.TabIndex = 24;
 			this.label25.Text = "\r\n";
+			this.label25.MouseEnter += new System.EventHandler(this.wall_Mouse);
 			// 
 			// Form1
 			// 
