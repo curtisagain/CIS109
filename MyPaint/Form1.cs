@@ -28,5 +28,40 @@ namespace MyPaint
 			else
 				drawing = true;
 		}
+
+		private void MyPaintPictureBox_MouseMove(object sender, MouseEventArgs e)
+		{
+			if (drawing)
+			{
+				Graphics g = Graphics.FromImage(bmp);
+				g.DrawEllipse(p, e.X, e.Y, 3, 1);
+				myPaintPictureBox.Image = bmp;
+			}
+		}
+
+		private void RedButton_Click(object sender, EventArgs e)
+		{
+			p.Color = Color.Red;
+		}
+
+		private void BlueButton_Click(object sender, EventArgs e)
+		{
+			p.Color = Color.Blue;
+		}
+
+		private void GreenButton_Click(object sender, EventArgs e)
+		{
+			p.Color = Color.Green;
+		}
+
+		private void PurpleButton_Click(object sender, EventArgs e)
+		{
+			p.Color = Color.Purple;
+		}
+
+		private void LimeButton_Click(object sender, EventArgs e)
+		{
+			p.Color = Color.Lime;
+		}
 	}
 }

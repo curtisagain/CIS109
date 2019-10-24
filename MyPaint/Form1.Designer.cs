@@ -99,6 +99,7 @@
 			this.RedButton.Name = "RedButton";
 			this.RedButton.Size = new System.Drawing.Size(31, 22);
 			this.RedButton.Text = "Red";
+			this.RedButton.Click += new System.EventHandler(this.RedButton_Click);
 			// 
 			// BlueButton
 			// 
@@ -109,6 +110,7 @@
 			this.BlueButton.Name = "BlueButton";
 			this.BlueButton.Size = new System.Drawing.Size(34, 22);
 			this.BlueButton.Text = "Blue";
+			this.BlueButton.Click += new System.EventHandler(this.BlueButton_Click);
 			// 
 			// GreenButton
 			// 
@@ -119,6 +121,7 @@
 			this.GreenButton.Name = "GreenButton";
 			this.GreenButton.Size = new System.Drawing.Size(42, 22);
 			this.GreenButton.Text = "Green";
+			this.GreenButton.Click += new System.EventHandler(this.GreenButton_Click);
 			// 
 			// PurpleButton
 			// 
@@ -129,6 +132,7 @@
 			this.PurpleButton.Name = "PurpleButton";
 			this.PurpleButton.Size = new System.Drawing.Size(45, 22);
 			this.PurpleButton.Text = "Purple";
+			this.PurpleButton.Click += new System.EventHandler(this.PurpleButton_Click);
 			// 
 			// LimeButton
 			// 
@@ -139,6 +143,7 @@
 			this.LimeButton.Name = "LimeButton";
 			this.LimeButton.Size = new System.Drawing.Size(37, 22);
 			this.LimeButton.Text = "Lime";
+			this.LimeButton.Click += new System.EventHandler(this.LimeButton_Click);
 			// 
 			// myPaintPictureBox
 			// 
@@ -149,6 +154,7 @@
 			this.myPaintPictureBox.Size = new System.Drawing.Size(800, 401);
 			this.myPaintPictureBox.TabIndex = 2;
 			this.myPaintPictureBox.TabStop = false;
+			this.myPaintPictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MyPaintPictureBox_MouseMove);
 			// 
 			// myPaintForm
 			// 
