@@ -67,13 +67,13 @@
 			// saveAsToolStripMenuItem
 			// 
 			this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-			this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
 			this.saveAsToolStripMenuItem.Text = "Save As";
 			// 
 			// saveImageAsToolStripMenuItem
 			// 
 			this.saveImageAsToolStripMenuItem.Name = "saveImageAsToolStripMenuItem";
-			this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
 			this.saveImageAsToolStripMenuItem.Text = "Save Image As";
 			// 
 			// toolStrip1
@@ -161,6 +161,8 @@
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "myPaintForm";
 			this.Text = "My Paint";
+			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MyPaintForm_MouseClick);
+			this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MyPaintForm_MouseClick);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.toolStrip1.ResumeLayout(false);

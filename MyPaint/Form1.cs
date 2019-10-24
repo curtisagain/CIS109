@@ -12,9 +12,21 @@ namespace MyPaint
 {
 	public partial class myPaintForm : Form
 	{
+		Bitmap bmp = new Bitmap(1024, 768);
+		Pen p = new Pen(Color.Black, 5);
+		bool drawing = false;
+
 		public myPaintForm()
 		{
 			InitializeComponent();
+		}
+
+		private void MyPaintForm_MouseClick(object sender, MouseEventArgs e)
+		{
+			if (drawing)
+				drawing = false;
+			else
+				drawing = true;
 		}
 	}
 }
