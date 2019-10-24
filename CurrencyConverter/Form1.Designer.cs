@@ -28,13 +28,35 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.buttonConverter = new System.Windows.Forms.Button();
+			this.webBrowser1 = new System.Windows.Forms.WebBrowser();
 			this.SuspendLayout();
+			// 
+			// buttonConverter
+			// 
+			this.buttonConverter.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.buttonConverter.Location = new System.Drawing.Point(-2, 13);
+			this.buttonConverter.Name = "buttonConverter";
+			this.buttonConverter.Size = new System.Drawing.Size(804, 37);
+			this.buttonConverter.TabIndex = 0;
+			this.buttonConverter.Text = "Currency Converter";
+			this.buttonConverter.UseVisualStyleBackColor = false;
+			// 
+			// webBrowser1
+			// 
+			this.webBrowser1.Location = new System.Drawing.Point(-2, 56);
+			this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+			this.webBrowser1.Name = "webBrowser1";
+			this.webBrowser1.Size = new System.Drawing.Size(790, 382);
+			this.webBrowser1.TabIndex = 1;
 			// 
 			// currencyForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.webBrowser1);
+			this.Controls.Add(this.buttonConverter);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
@@ -46,6 +68,9 @@
 		}
 
 		#endregion
+
+		private System.Windows.Forms.Button buttonConverter;
+		private System.Windows.Forms.WebBrowser webBrowser1;
 	}
 }
 
