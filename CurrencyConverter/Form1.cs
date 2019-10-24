@@ -16,5 +16,12 @@ namespace CurrencyConverter
 		{
 			InitializeComponent();
 		}
+
+		private void ButtonConverter_Click(object sender, EventArgs e)
+		{
+			//API is down for google converter
+			webBrowser1.Navigate("https://www.google.co.uk/finance/converter");
+
+		}
 	}
 }
