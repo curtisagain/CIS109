@@ -20,7 +20,7 @@ namespace CurrencyConverter
 		private void ButtonConverter_Click(object sender, EventArgs e)
 		{
 			//API is down for google converter
-			webBrowser1.Navigate("https://www.google.co.uk/finance/converter");
+			webBrowser1.Navigate("https://www.foreignexchangeresource.com/currency-converter.php?c=CAD&a=USD&amt=1&panel=1&button=2");
 
 		}
 	}
