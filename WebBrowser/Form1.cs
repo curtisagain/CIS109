@@ -19,7 +19,25 @@ namespace WebBrowser
 
 		private void ButtonForward_Click(object sender, EventArgs e)
 		{
+			webBrowser1.GoForward();
+		}
 
+		private void cboLocation_KeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.KeyCode==Keys.Enter)
+			{
+				webBrowser1.Navigate(cboLocation.Text);
+			}
+		}
+
+		private void ButtonGo_Click(object sender, EventArgs e)
+		{
+			webBrowser1.Navigate(cboLocation.Text);
+		}
+
+		private void ButtonBack_Click(object sender, EventArgs e)
+		{
+			webBrowser1.GoBack();
 		}
 	}
 }

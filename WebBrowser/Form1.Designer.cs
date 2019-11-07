@@ -68,6 +68,7 @@
 			this.ButtonBack.Name = "ButtonBack";
 			this.ButtonBack.Size = new System.Drawing.Size(36, 22);
 			this.ButtonBack.Text = "Back";
+			this.ButtonBack.Click += new System.EventHandler(this.ButtonBack_Click);
 			// 
 			// ButtonForward
 			// 
@@ -83,6 +84,7 @@
 			// 
 			this.cboLocation.Name = "cboLocation";
 			this.cboLocation.Size = new System.Drawing.Size(121, 25);
+			this.cboLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboLocation_KeyDown);
 			// 
 			// ButtonGo
 			// 
@@ -92,6 +94,7 @@
 			this.ButtonGo.Name = "ButtonGo";
 			this.ButtonGo.Size = new System.Drawing.Size(26, 22);
 			this.ButtonGo.Text = "Go";
+			this.ButtonGo.Click += new System.EventHandler(this.ButtonGo_Click);
 			// 
 			// FormMain
 			// 
