@@ -39,5 +39,10 @@ namespace WebBrowser
 		{
 			webBrowser1.GoBack();
 		}
+
+		private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+		{
+			Text = "Trowser - " + webBrowser1.Document.Title;
+		}
 	}
 }
